@@ -55,10 +55,13 @@
 
 // 百、二百、千 → 100、200、1000 はどうしようか…
 
-const elm_output = document.getElementById('output-text')
 const elm_input = document.getElementById('input-text')
+const elm_output = document.getElementById('output-text')
 document.getElementById('submit-text').addEventListener('click', ev_translate)
-document.getElementById('clear-text').addEventListener('click', ()=>elm_input.value = '')
+document.getElementById('clear-text').addEventListener('click', () => {
+    elm_input.value = '';
+    elm_output.value = '';
+})
 
 var test_input;
 //test_input = document.getElementById('input-text').value
